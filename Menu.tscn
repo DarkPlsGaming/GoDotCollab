@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://del05tx425ber"]
+
+[ext_resource type="Texture2D" uid="uid://btn84s6mas6yy" path="res://AVB.jpg" id="1_ylpcl"]
+[ext_resource type="Texture2D" uid="uid://27f56rxnelk1" path="res://Q2.jpg" id="2_dolsu"]
+[ext_resource type="Texture2D" uid="uid://cryl3lbvx6yh6" path="res://P2.jpg" id="3_cx167"]
+[ext_resource type="Texture2D" uid="uid://b33wm2pa8hgha" path="res://Holllow Mage.png" id="5_n4eug"]
+
+[sub_resource type="GDScript" id="GDScript_cx167"]
+script/source = "extends TextureButton
+
+func _ready():
+	# Connect the button's pressed signal to a function
+	connect(\"pressed\", Callable(self, \"_on_button_pressed\"))
+
+func _on_button_pressed():
+	print(\"HI\")
+"
+
+[sub_resource type="GDScript" id="GDScript_ylpcl"]
+script/source = "extends TextureButton
+
+func _ready():
+	# Connect the button's pressed signal to a function
+	connect(\"pressed\", Callable(self, \"_on_button_pressed\"))
+
+func _on_button_pressed():
+	print(\"HI\")
+"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(582, 329)
+scale = Vector2(2.302, 2.592)
+texture = ExtResource("1_ylpcl")
+
+[node name="Quit" type="TextureButton" parent="."]
+offset_left = 341.0
+offset_top = 433.0
+offset_right = 813.0
+offset_bottom = 587.0
+texture_normal = ExtResource("2_dolsu")
+texture_pressed = ExtResource("2_dolsu")
+texture_hover = ExtResource("2_dolsu")
+script = SubResource("GDScript_cx167")
+
+[node name="Play" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 339.0
+offset_top = 293.00003
+offset_right = 796.0
+offset_bottom = 466.58322
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.73739856)
+texture_normal = ExtResource("3_cx167")
+texture_pressed = ExtResource("3_cx167")
+texture_hover = ExtResource("3_cx167")
+stretch_mode = 0
+script = SubResource("GDScript_ylpcl")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Hollow Mage" type="Sprite2D" parent="."]
+position = Vector2(555, 139)
+texture = ExtResource("5_n4eug")
