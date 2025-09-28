@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcn6snmib3q2q"]
+
+[ext_resource type="FontFile" uid="uid://itl1fnex164b" path="res://RasterForgeRegular-JpBgm.ttf" id="1_8evjy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 118.0
+offset_top = 121.0
+offset_right = 1114.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("1_8evjy")
+theme_override_font_sizes/font_size = 44
+text = "Oh no.. I guess you need to.. GIT gud"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 185.0
+offset_top = 254.0
+offset_right = 1003.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("1_8evjy")
+theme_override_font_sizes/font_size = 22
+text = "Press Space to play again or press  escape to rage quit"
